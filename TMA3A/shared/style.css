@@ -1,0 +1,158 @@
+﻿/*style sheet for web applications*/
+body{
+	background-color:#6495ED;
+	color: black;
+	line-height:2;
+	font-size:90%;
+	text-align:left;
+	font-family: Tahoma, Geneva, sans-serif;
+	 background-size: 100% auto;
+}
+html,body{
+    margin:0 auto;
+	height:100%;
+	width:80%;
+}
+#headerDiv, #headerDiv1{
+    color:white;
+    background-image:url("comp.png");
+    min-height:100px;
+       background-repeat:no-repeat;
+}
+#headerDiv nav{
+    background-color:#6495ED;
+	color: white;
+	position: absolute;
+	left:50.5%;
+    top:90px;
+	
+}
+#headerDiv1 nav{
+    background-color:#6495ED;
+	color: white;
+	position: absolute;
+	left:60.5%;
+    top:90px;
+	
+}
+.tmaheader nav{
+	height: 40px;
+	position: absolute;
+	left: 35.5%;
+	top:90px;
+}
+#headerDiv nav ul,.tmaheader nav ul,#headerDiv1 nav ul{
+	list-style:none;
+	margin: 0 auto;
+}
+#headerDiv nav ul li,.tmaheader nav ul li, #headerDiv1 nav ul li{
+	display: inline;
+	float:left;
+
+}
+#headerDiv nav a:link,#headerDiv nav a:visited,.tmaheader nav a:link, .tmaheader nav a:visited,#headerDiv1 nav a:link,#headerDiv1 nav a:visited {
+	color: black;
+	padding: 0px 42.15px;
+	
+	
+}
+#headerDiv nav .current a:link,#headerDiv nav .current a:visited,#headerDiv1 nav .current a:link,#headerDiv1 nav .current a:visited {
+	color: red;
+	border-bottom: 5px solid white;
+	
+	
+}
+#headerDiv nav a:hover, .tmaheader nav a:hover,#headerDiv1 nav a:hover{
+	color: red;
+	border-bottom: 2.5px solid white;
+}
+
+a{
+	text-decoration:none;
+}
+a:link, a:visited{
+	color:lawngreen;
+}
+a:hover{
+	color: red;
+}
+#homeContent{
+    padding: 2% 5%;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color:white;
+	color:black;
+}
+#mainContent,#resultDiv{
+	 border: 2px solid red;
+	padding: 2% 5%;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color:white;
+	color:black;
+    margin:auto;
+    text-align:center;
+
+}
+#UpdatePanel1{
+   text-align:center;
+}
+
+footer{
+	border-top:1px solid black;
+	color:black;
+	width: 100%;
+	float:left;
+	margin: 2% 0%;
+	text-align:center;
+}
+
+#RadioButtonListCPU,#RadioButtonListMOBO,#CheckBoxListMem,#CheckBoxListStor,#RadioButtonListVC,#RadioButtonListCase,#RadioButtonListOS,#RadioButtonListPSU,#RequiredFieldValidatorCPU,#RequiredFieldValidatorMOBO,#RequiredFieldValidatorVC,#RequiredFieldValidatorCase,#RequiredFieldValidatorOS,#RequiredFieldValidatorPSU{
+    text-align:center;
+     margin:auto;
+}
+
+hr{
+	clear:both;
+
+}
+
+button{
+	color:white;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	display: inline;
+	background-color: #99bbff;
+	padding:1%;
+	border:none;
+  
+}
+input[type="submit"]{
+    color:white;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	display: inline;
+	background-color: #99bbff;
+	padding:1%;
+	border:none;
+ 
+}
+
+
+input[type=text],input[type=number], input[type=email], input[type=url]{
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+	height:20px; 
+    width: 300px; 
+    border: 1px solid black; 
+	cursor: pointer;
+
+}
+
+
+

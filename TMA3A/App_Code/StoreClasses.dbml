@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StoreDB" Class="StoreClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StoreDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="StoreDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UserInfo" Member="UserInfos">
+    <Type Name="UserInfo">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Association Name="UserInfo_OrderInfo" Member="OrderInfos" ThisKey="UserID" OtherKey="UserID" Type="OrderInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderInfo" Member="OrderInfos">
+    <Type Name="OrderInfo">
+      <Column Name="OrderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CPU" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Mobo" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Memory" Type="System.String" DbType="NChar(500)" CanBeNull="true" />
+      <Column Name="Storage" Type="System.String" DbType="NChar(500)" CanBeNull="true" />
+      <Column Name="VideoC" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="[Case]" Member="Case" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="OS" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="PSU" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="tPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="UserInfo_OrderInfo" Member="UserInfo" ThisKey="UserID" OtherKey="UserID" Type="UserInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
